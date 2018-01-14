@@ -25,13 +25,14 @@ def has_two_pairs(word):
 
 if __name__ == '__main__':
     words_file_name = "./words.txt"
-    words_file = open(words_file_name)
+    words_file1 = open(words_file_name)
+    words_file2 = open(words_file_name)
     print("Words with three consecutive double letters")
-    for line in words_file:
+    for line in words_file1:
         if has_three_pairs(line):
             print(line)
     print("Words with two consecutive double letters")
-    for line in words_file:
-        print(line)
+
+    for line in words_file2:
         if has_two_pairs(line):
             print(line)
