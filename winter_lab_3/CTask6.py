@@ -34,5 +34,6 @@ if __name__ == '__main__':
     print("Words with two consecutive double letters")
 
     for line in words_file2:
+        print(line)
         if has_two_pairs(line):
             print(line)
