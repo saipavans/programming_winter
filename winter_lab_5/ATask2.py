@@ -19,7 +19,7 @@ def words_counter(file_list):
     return result
 
 if __name__ == '__main__':
-    input_file_list = ["./resources/The_new_england_country.txt", "./resources/cape_cod.txt"]
+    input_file_list = ["../resources/book1.txt", "../resources/book2.txt"]
     word_details_list = words_counter(input_file_list)
     highest_words = 0
     highest_words_book_index = 0

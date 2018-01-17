@@ -16,7 +16,7 @@ def rotate_word(s,n):
             return ""
     return result
 
-print(rotate_word("abcd",-1))
+print(rotate_word("abcd",-3))
 print(rotate_word("abyz",1))
 
 

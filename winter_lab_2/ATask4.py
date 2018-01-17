@@ -9,5 +9,5 @@ def arc(t, l, r, arc_angle):
 
 if __name__ == '__main__':
     turtle_obj = turtle.Turtle()
-    arc(turtle_obj, 5, 50, 270)
+    arc(turtle_obj, 5, 50, 180)
     turtle.mainloop()

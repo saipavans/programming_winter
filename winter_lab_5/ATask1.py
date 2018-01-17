@@ -18,7 +18,7 @@ def compress_file(file):
     return compressed_file_content
 
 if __name__ == '__main__':
-    input_file = "./resources/The_new_england_country.txt"
+    input_file = "../resources/book1.txt"
     print(compress_file(input_file))
 
 

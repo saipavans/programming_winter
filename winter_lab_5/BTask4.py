@@ -1,20 +1,12 @@
-import urllib
+import urllib3
 
 
-zip_code = input("Enter zip code: ")
+#zip_code = input("Enter zip code: ")
+zip_code = "02492"
+http = urllib3.PoolManager()
 url = "http://www.uszip.com/zip/"
-conn = urllib.urlopen(url +  str(zip_code))
-town_match_pattern = "<h2><strong>"
-population_match_pattern = "<dt>Total population</dt><dd>"
+result = http.request("GET", url +  str(zip_code))
+data_str = str(result.data)
+filtered_data = data_str.split("is the zip code for")[1].split("strong")[1].split(" ")[0]
 
-
-town_name = ""
-for line in conn:
-    town_index_start = line.find(town_match_pattern)
-    if town_index_start != -1:
-        line_words = line.split("strong>")
-        town_name = line_words[1]
-        print(town_name)
-    elif line.find(population_match_pattern) != -1:
-        print(line.split(population_match_pattern)[1])
-
+print("TOWN NAME:",filtered_data[1:-1])
