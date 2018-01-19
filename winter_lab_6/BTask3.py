@@ -4,11 +4,11 @@ def increment(time_object, seconds):
     minutes_total = 0
     hours_total = 0
 
-    while seconds > 60:
+    if seconds > 60:
         minutes, seconds = divmod(seconds, 60)
         minutes_total+= minutes
 
-    while minutes_total > 60:
+    if minutes_total > 60:
         hours, minutes_total = divmod(minutes_total, 60)
         hours_total += hours
 
